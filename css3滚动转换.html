@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3滚动转换</title>
+    <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body>
+    <section>
+        <h1>This is a secret!</h1>
+        <span class="curve">
+            <img src="./assets/images/curve.png" >
+        </span>
+    </section>
+    <script type="text/javascript">
+        // querySelector(CSS selectors)
+        //  * 返回文档中匹配指定CSS选择器的一个元素
+        var scroll = document.querySelector('.curve');
+        window.addEventListener('scroll', function(){
+            var value = 1 + window.scrollY/-500;
+            scroll.style.transform = `scaleY(${value})`;
+        })
+    </script>
+</body>
+</html>
